@@ -10,7 +10,7 @@ while i<3
      (humano=="tijera" && ordenador=="papel") ||
      (humano=="papel" && ordenador=="piedra") 
       i+=1
-        puts "Puntuación: #{i}" 
+        puts "Puntuación Humano: #{i}" 
     end
 end
     
