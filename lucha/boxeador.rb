@@ -1,4 +1,4 @@
-class Boxeador < Luchador
+class karateka < Luchador
     
     def initialize(nombre)
         super(nombre)
