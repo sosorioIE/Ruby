@@ -5,7 +5,7 @@ class Luchador
         @ptosVida=100
         @victorias=0
     end
-    
+
     def mostrar_vida
         puts "#{@nombre} tiene #{@ptosVida} puntos de vida"
     end

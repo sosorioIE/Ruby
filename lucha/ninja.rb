@@ -1,13 +1,39 @@
 class Ninja < Luchador
     
-    def golpear_pierna(rival)
-        if(rand 0..1)==1
-            rival.ptosVida-=10
-            acierto=true
-        else 
-            acierto=false
-        end
-        puts "#{@nombre} pega con piernas, #{acierto ? 'Acierta' : 'Falla'}. Vida #{@nombre}, vida #{rival}"
+    def initialize(nombre)
+        super(nombre)
+        @fuerza_manos=5
+        @prob_manos=0.5
+        @fuerza_piernas=3
+        @prob_piernas=0.5
+        @prob_esquivar=0.8
     end
 
-    def esquivar
+    def golpear_manos(rival)
+        if rand<@prob_manos
+        daño=@fuerza_manos
+        rival.ptosVida-=daño
+        puts "#{@nombre} pega con manos, Acierta. Vida #{@nombre} #{@ptosVida}, vida #{rival.ptosVida} #{rival}"
+        else
+        puts "#{@nombre} pega con manos, Falla. Vida #{@nombre} #{@ptosVida}, vida #{rival.ptosVida} #{rival}"
+        end
+    end
+
+    def golpear_piernas(rival)
+        if rand<@prob_piernas
+        daño=@fuerza_piernas
+        rival.ptosVida-=daño
+        puts "#{@nombre} pega con piernas, Acierta. Vida #{@nombre} #{@ptosVida}, vida #{rival.ptosVida} #{rival}"
+        else
+        puts "#{@nombre} pega con piernas, Falla. Vida #{@nombre} #{@ptosVida}, vida #{rival.ptosVida} #{rival}"
+        end
+    end
+
+
+    def esquivar 
+        if rand<@prob_esquivar 
+        end
+    end
+
+
+
