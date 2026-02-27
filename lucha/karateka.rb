@@ -1,12 +1,11 @@
-class Ninja < Luchador
+class Karateka < Luchador
     
     def initialize(nombre)
         super(nombre)
-        @fuerza_manos=5
-        @prob_manos=0.5
-        @fuerza_piernas=3
-        @prob_piernas=0.5
-        @prob_esquivar=0.8
+        @fuerza_manos=6
+        @prob_manos=0.3
+        @fuerza_piernas=4
+        @prob_piernas=0.7
     end
 
     def golpear_manos(rival)
@@ -23,16 +22,12 @@ class Ninja < Luchador
         if rand<@prob_piernas
         daño=@fuerza_piernas
         rival.ptosVida-=daño
-        puts "#{@nombre} pega con piernas, Acierta. Vida #{@nombre} #{@ptosVida}, vida #{rival.nombre} #{rival.ptosVida} "
+        puts "#{@nombre} pega con piernas, Acierta. Vida #{@nombre} #{@ptosVida}, vida #{rival.nombre} #{rival.ptosVida}"
         else
         puts "#{@nombre} pega con piernas, Falla. Vida #{@nombre} #{@ptosVida}, vida #{rival.nombre} #{rival.ptosVida} "
         end
     end
-
-
-    def esquivar 
-        if rand<@prob_esquivar 
-        end
-    end
 end
+
+
 
