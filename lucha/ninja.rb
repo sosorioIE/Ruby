@@ -7,5 +7,7 @@ class Ninja < Luchador
         else 
             acierto=false
         end
-        puts "#{@nombre} pega con piernas, #{acierto?'Acierta' : 'Falla'}. Vida #{@nombre}, vida #{rival}"
+        puts "#{@nombre} pega con piernas, #{acierto ? 'Acierta' : 'Falla'}. Vida #{@nombre}, vida #{rival}"
     end
+
+    def esquivar
