@@ -29,8 +29,8 @@ class Combate
         end
         @luchador1.ptosVida=100
         @luchador2.ptosVida=100 
+
     end
 
 end
-
-        
+ 
