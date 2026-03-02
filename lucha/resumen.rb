@@ -1,6 +1,6 @@
 class Resumen < Luchador
-    def initialize(l1,l2,l3)
-        @luchadores=[l1,l2,l3]
+    def initialize(l1,l2,l3,l4)
+        @luchadores=[l1,l2,l3,l4]
     end
 
     def mostrar_clasificacion
