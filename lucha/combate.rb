@@ -10,9 +10,9 @@ class Combate
 
         while @luchador1.ptosVida>0 && @luchador2.ptosVida>0
             if turno.even?
-                @luchador1.golpear_manos(@luchador2)
+                @luchador1.atacar(@luchador2)
             else
-                @luchador2.golpear_manos(@luchador1)
+                @luchador2.atacar(@luchador1)
             end
             turno+=1
         end
@@ -25,8 +25,10 @@ class Combate
             @luchador1.victorias+=1
         else 
             puts "El ganador es #{@luchador2.nombre}"
-            @luchador2.victorias+=1    
+            @luchador2.victorias+=1  
         end
+        @luchador1.ptosVida=100
+        @luchador2.ptosVida=100 
     end
 
 end

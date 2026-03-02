@@ -27,6 +27,14 @@ class Karateka < Luchador
         puts "#{@nombre} pega con piernas, Falla. Vida #{@nombre} #{@ptosVida}, vida #{rival.nombre} #{rival.ptosVida} "
         end
     end
+
+    def atacar(rival)
+        if rand<0.5
+            golpear_manos(rival)
+        else 
+            golpear_piernas(rival)
+        end
+    end
 end
 
 

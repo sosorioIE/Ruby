@@ -20,4 +20,8 @@ class Boxeador < Luchador
     def esquivar?
         rand<@prob_esquivar
     end
+
+    def atacar(rival)
+        golpear_manos(rival)
+    end
 end

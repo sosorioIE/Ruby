@@ -34,5 +34,13 @@ class Ninja < Luchador
         if rand<@prob_esquivar 
         end
     end
+
+    def atacar(rival)
+        if rand<0.5
+            golpear_manos(rival)
+        else 
+            golpear_piernas(rival)
+        end
+    end
 end
 
