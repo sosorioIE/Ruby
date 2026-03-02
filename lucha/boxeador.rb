@@ -4,16 +4,20 @@ class Boxeador < Luchador
         super(nombre)
         @fuerza_manos=10
         @prob_manos=1
-        prob_esquivar=0.4
+        @prob_esquivar=0.4
     end
 
     def golpear_manos(rival)
         if rand<@prob_manos
-        daño=@fuerza_manos
-        rival.ptosVida-=daño
-        puts "#{@nombre} pega con manos, Acierta. Vida #{@nombre} #{@ptosVida}, vida #{rival.nombre} #{rival.ptosVida} "
+            if(rival.esquivar?)
+                puts "#{@nombre} golpea, pero #{rival.nombre} esquiva!"
+            else 
+                daño=@fuerza_manos
+                rival.ptosVida-=daño
+                puts "#{@nombre} pega con manos, Acierta. Vida #{@nombre} #{@ptosVida}, vida #{rival.nombre} #{rival.ptosVida} "
+            end 
         else
-        puts "#{@nombre} pega con manos, Falla. Vida #{@nombre} #{@ptosVida}, vida #{rival.nombre} #{rival.ptosVida}"
+            puts "#{@nombre} pega con manos, Falla. Vida #{@nombre} #{@ptosVida}, vida #{rival.nombre} #{rival.ptosVida}"
         end
     end
 

@@ -10,4 +10,8 @@ class Luchador
         puts "#{@nombre} tiene #{@ptosVida} puntos de vida"
     end
 
+    def esquivar?
+      false
+    end
+
 end
