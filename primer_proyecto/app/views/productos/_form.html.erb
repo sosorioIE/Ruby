@@ -1,0 +1,37 @@
+<%= form_with(model: producto, local: true) do |form| %>
+  <% if producto.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(producto.errors.count, "error") %> prohibited this producto from being saved:</h2>
+
+      <ul>
+      <% producto.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nombre %>
+    <%= form.text_field :name, id: :producto_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :descripción %>
+    <%= form.text_area :description, id: :producto_description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :referencia %>
+    <%= form.number_field :reference, id: :producto_reference %>
+  </div>
+
+  <div class="field">
+    <%= form.label :precio %>
+    <%= form.text_field :price, id: :producto_price %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit producto.new_record? ? "Añadir Producto":"Actualizar Producto" %>
+  </div>
+<% end %>
