@@ -23,7 +23,12 @@
 
 <p>
   <strong>Gastos de envío:</strong>
-  <%= number_to_currency(@producto.gastos_envio(@producto.price), unit: "") + " €" %>
+  <%= number_to_currency(@producto.gastos_envio, unit: "") + " €" %>
+</p>
+
+<p>
+  <strong>Stock:</strong>
+  <%= @producto.stock? %> unidades
 </p>
 
 <p>

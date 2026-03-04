@@ -7,6 +7,7 @@
       <li>
         <%= link_to producto.name ,producto_path(producto)%>
         (<%= producto.price %>€)
+        (<%= producto.stock? %>)
         <%= link_to 'Editar', edit_producto_path(producto) %>
         <%= link_to 'Eliminar', producto, method: :delete, data: { confirm: "¿Estás seguro de que quieres eliminar #{producto.name}?"} %>
       </li>

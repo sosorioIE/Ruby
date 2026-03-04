@@ -31,6 +31,11 @@
     <%= form.text_field :price, id: :producto_price %>
   </div>
 
+  <div class="field">
+    <%= form.label :stock %>
+    <%= form.number_field :stock, id: :producto_stock %>
+  </div>
+
   <div class="actions">
     <%= form.submit producto.new_record? ? "Añadir Producto":"Actualizar Producto" %>
   </div>
