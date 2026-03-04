@@ -17,6 +17,11 @@
          <%= link_to 'Clientes', clientes_path %> 
          </nav>
     </header>
+
     <%= yield %>
+
+    <footer>
+       <p>&copy; <%= Time.current.year %> SergioShop - Todos los derechos reservados</p>
+    </footer>
   </body>
 </html>
