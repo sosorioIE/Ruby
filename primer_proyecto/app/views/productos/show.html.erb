@@ -21,5 +21,12 @@
   <%= @producto.price %> €
 </p>
 
+<p>
+  <strong>Gastos de envío:</strong>
+  <%= number_to_currency(@producto.gastos_envio(@producto.price), unit: "") + " €" %>
+</p>
+
+<p>
+
 <%= link_to 'Editar', edit_producto_path(@producto) %> |
 <%= link_to 'Volver', productos_path %>
