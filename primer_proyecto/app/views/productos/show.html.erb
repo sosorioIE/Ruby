@@ -22,6 +22,11 @@
 </p>
 
 <p>
+<strong>Precio con Descuento:</strong>
+  <%= number_to_currency(@producto.precio_con_descuento, unit: "") + " €" %> 
+</p>
+
+<p>
   <strong>Gastos de envío:</strong>
   <%= number_to_currency(@producto.gastos_envio, unit: "") + " €" %>
 </p>

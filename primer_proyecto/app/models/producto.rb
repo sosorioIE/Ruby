@@ -13,4 +13,10 @@ class Producto < ApplicationRecord
             "Disponible #{unidades}"
         end
     end
+
+    def precio_con_descuento
+       return price if descuento.nil? || descuento == 0
+       price - (price * descuento / 100.0)
+    end
+
 end
