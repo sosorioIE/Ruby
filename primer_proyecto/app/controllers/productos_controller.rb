@@ -42,7 +42,7 @@ class ProductosController < ApplicationController
   def update
     respond_to do |format|
       if @producto.update(producto_params)
-        format.html { redirect_to @producto, notice: 'Producto was successfully updated.' }
+        format.html { redirect_to @producto, notice: "#{@producto.name} fue creado correctamente." }
         format.json { render :show, status: :ok, location: @producto }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class ProductosController < ApplicationController
   def destroy
     @producto.destroy
     respond_to do |format|
-      format.html { redirect_to productos_url, notice: 'Producto was successfully destroyed.' }
+      format.html { redirect_to productos_url, notice: "#{@producto.name} fue eliminado correctamente." }
       format.json { head :no_content }
     end
   end
