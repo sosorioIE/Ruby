@@ -12,6 +12,13 @@
       </li>
     <% end %>
 </ul>
+  <% if @page>1 %>
+    <%= link_to "Retroceder", productos_path(page: @page -1) %>
+  <% end %>
+
+  <% if @page < @total_pages %>
+    <%= link_to "Avanzar", productos_path(page: @page +1) %>
+  <% end %>
 
 <br>
 

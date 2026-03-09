@@ -4,7 +4,14 @@ class ProductosController < ApplicationController
   # GET /productos
   # GET /productos.json
   def index
-    @productos = Producto.all
+    per_page=3 #Productos por página
+    page=(params[:page] || 1).to_i #Página actual, por defecto pondremos la página 1
+    offset= (page-1) * per_page #saltar registros de páginas anteriores
+
+    @productos=Producto.limit(per_page).offset(offset) #Traemos los productos de esa página
+    @page=page #Página actual
+    @total_pages=(Producto.count/per_page.to_f).ceil #calcular total de páginas, to_f se usa para que nos salga un decimal
+    # con ceil aproximamos por si algun producto queda suelto y hay que crear otra página
   end
 
   # GET /productos/1

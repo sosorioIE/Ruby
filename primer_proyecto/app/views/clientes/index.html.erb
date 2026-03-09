@@ -5,6 +5,7 @@
     <% @clientes.each do |cliente| %>
       <li>
         <%= link_to cliente.nombre ,cliente_path(cliente)%>
+        <%= link_to cliente.apellidos ,cliente_path(cliente)%>
         <%= link_to 'Editar', edit_cliente_path(cliente) %>
         <%= link_to 'Eliminar', cliente, method: :delete, data: { confirm: "¿Estás seguro de que quieres eliminar a #{cliente.nombre}?"} %>
       </li>

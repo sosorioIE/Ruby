@@ -7,10 +7,10 @@ class Producto < ApplicationRecord
 
     def stock?
         unidades= self.stock || 0
-        if unidades<=0
+        if unidades<=0 
             "No Disponible"
         else 
-            "Disponible #{unidades}"
+            "Disponible #{unidades} unidades"
         end
     end
 
