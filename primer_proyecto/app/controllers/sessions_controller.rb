@@ -14,7 +14,7 @@ class SessionsController < ApplicationController
       redirect_to root_path, notice: "Bienvenido, #{cliente.usuario}!"
     else
       flash.now[:alert] = "Email o contraseña incorrecta" #muestra  un mensaje de alerta en la ventana actual
-      render :new #vue
+      render :new #vuelve a mostrar el formulario de login
     end
   end
 
