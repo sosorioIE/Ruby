@@ -1,7 +1,7 @@
 <h1>Iniciar sesión</h1>
 
 <% if flash[:alert] %>
-  <p style="color: red;"><%= flash[:alert] %></p> #nos mostrará la alerta que definimos en el sessionsController
+  <p style="color: red;"><%= flash[:alert] %></p> 
 <% end %>
 
 <%= form_tag login_path do %>
