@@ -11,11 +11,18 @@
   <body>
   <header>
       <h1>SergioShop</h1>
+      <% if logged_in? %>
+       Bienvenido, <%= current_cliente.usuario %> |
+       <%= link_to "Salir", logout_path, method: :delete %>
+       <% else %>
+       <%= link_to "Iniciar sesión", login_path %>
+       <% end %>
       <nav>
          <%= link_to 'Inicio', root_path %> |
          <%= link_to 'Productos', productos_path %> |
          <%= link_to 'Clientes', clientes_path %> 
          </nav>
+         
     </header>
 
     <%= yield %>

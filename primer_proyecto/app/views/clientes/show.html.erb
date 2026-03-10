@@ -2,23 +2,18 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Nombre:</strong>
-  <%= @cliente.nombre %>
+  <strong>Usuario:</strong>
+  <%= @cliente.usuario %>
 </p>
 
 <p>
-  <strong>Apellidos:</strong>
-  <%= @cliente.apellidos %>
+  <strong>Email:</strong>
+  <%= @cliente.email %>
 </p>
 
 <p>
-  <strong>Direccion:</strong>
-  <%= @cliente.direccion %>
-</p>
-
-<p>
-  <strong>Nif:</strong>
-  <%= @cliente.nif %>
+  <strong>password:</strong>
+  <%= @cliente.password %>
 </p>
 
 <%= link_to 'Editar', edit_cliente_path(@cliente) %> |

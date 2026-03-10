@@ -4,14 +4,12 @@
 <ul>
     <% @clientes.each do |cliente| %>
       <li>
-        <%= link_to cliente.nombre ,cliente_path(cliente)%>
-        <%= link_to cliente.apellidos ,cliente_path(cliente)%>
-        <%= link_to 'Editar', edit_cliente_path(cliente) %>
-        <%= link_to 'Eliminar', cliente, method: :delete, data: { confirm: "¿Estás seguro de que quieres eliminar a #{cliente.nombre}?"} %>
+        <%= link_to cliente.usuario ,cliente_path(cliente)%>
+        <%= link_to 'Eliminar', cliente, method: :delete, data: { confirm: "¿Estás seguro de que quieres eliminar a #{cliente.usuario}?"} %>
       </li>
     <% end %>
 </ul>
 
 <br>
 
-<%= link_to 'Nuevo Cliente', new_cliente_path %>
+<%= link_to 'Registrarse', new_cliente_path %>
